@@ -1,0 +1,71 @@
+@model IEnumerable<FinalProject.Models.Parent>
+
+@{
+    ViewData["Title"] = "Parent";
+}
+
+<h2>Parent</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.FamilyId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ParentName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ChildFirstName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ChildLastName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RoomNo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TeacherName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SchoolName)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.FamilyId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ParentName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ChildFirstName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ChildLastName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RoomNo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TeacherName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SchoolName)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.FamilyId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.FamilyId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.FamilyId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

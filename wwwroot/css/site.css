@@ -1,0 +1,33 @@
+﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+ul{
+  list-style-type:none;
+  margin:0;
+  padding:0;
+  overflow: hidden;
+ background-color:rgb(243, 146, 19);
+ }
+ @media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+ 
+ li{
+   float:left;
+   }
+ li a {
+    display:block;
+    color:rgb(106, 231, 81);
+    text-align:conter;
+ padding:14px 16px;
+ text-decoration:none;
+ }
+ 
+ li a:hove:not(.active){
+  background-color:rgb(180, 47, 47);
+ }
+ .active{
+ background-color:rgb(93, 182, 97);
+ }
